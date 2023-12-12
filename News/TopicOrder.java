@@ -1,0 +1,5 @@
+package News;
+
+public enum TopicOrder {
+    PUBLISHINGS, CANCELED_LESSONS, INTERESTING_ACTIVITIES
+}
