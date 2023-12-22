@@ -3,22 +3,47 @@ package Researcher;
 import java.util.*;
 
 public class Researcher implements BeResearcher, Comparator<ResearchPaper> {
+	private List<ResearchProject>researchProjects;
+	private List<ResearchPaper>researchPapers;
+	private int hIndex;
 
 	private TypeOfTeacher resercherEmpl;
 
 	public Researcher(){
 
-		super();
 	}
-//	public void PrintPapers(Comparator<ResearchPaper> c) {
-//		Collections.sort(papers, c);
-//
-//		// Print the sorted papers
-//		papers.forEach(System.out::println);
-//	}
+	public Researcher(List<ResearchProject> researchProjects,List<ResearchPaper>researchPapers,int hIndex,TypeOfTeacher resercherEmpl) {
+		this.researchProjects = researchProjects;
+		this.researchPapers = researchPapers;
+		this.hIndex = hIndex;
+		this.resercherEmpl = resercherEmpl;
+	}
+
+	public void printPapers(Comparator<ResearchPaper> c) {
+		Collections.sort(researchPapers, c);
+		researchPapers.forEach(System.out::println);
+	}
+	@Override
+	public List<ResearchProject> getResearchProjects() {
+		return researchProjects;
+	}
+	@Override
+	public List<ResearchPaper> getResearchPaper() {
+		return researchPapers;
+	}
+	@Override
+	public void addResearchPaper(ResearchPaper paper) {
+		researchPapers.add(paper);
+	}
+
+	@Override
+	public void addResearchProject(ResearchProject project) {
+		researchProjects.add(project);
+	}
 
 	@Override
 	public boolean beParticipant() {
+
 		return false;
 	}
 
@@ -46,10 +71,6 @@ public class Researcher implements BeResearcher, Comparator<ResearchPaper> {
 		return false;
 	}
 
-	@Override
-	public ResearchPaper printPapers(Comparator c) {
-		return null;
-	}
 
 	@Override
 	public boolean publishResearchPapers() {
@@ -66,4 +87,6 @@ public class Researcher implements BeResearcher, Comparator<ResearchPaper> {
 		return 0;
 	}
 }
+
+
 
