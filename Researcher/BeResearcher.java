@@ -4,21 +4,16 @@ import java.text.*;
 import java.util.*;
 
 public  interface BeResearcher {
-
+	List<ResearchProject>getResearchProjects();
+	void addResearchProject(ResearchProject project);
+	List<ResearchPaper> getResearchPaper();
+	void addResearchPaper(ResearchPaper paper);
 	boolean beParticipant() ;
-	
-
 	int calculateHIndex() ;
-
 	boolean getCitation(Format f) ;
-	
-
-	public ResearchPaper printPapers(Comparator c) ;
-
-	public boolean publishResearchPapers () ;
-
-	
-	public void publishingPaper() ;
+	void printPapers(Comparator<ResearchPaper> c) ;
+	boolean publishResearchPapers () ;
+	void publishingPaper() ;
 	
 	
 }
