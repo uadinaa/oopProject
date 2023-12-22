@@ -67,10 +67,6 @@ public class ResearchPaper {
 		this.citations = citations;
 	}
 
-	public int getHIndex() {
-		return 0;
-	}
-
 
 //	public void printPapers(Comparator<ResearchPaper> c) {
 //		Collections.sort(researchPapers, c);
