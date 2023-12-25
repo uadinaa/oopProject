@@ -33,6 +33,9 @@ public class Researcher implements BeResearcher, Comparator<ResearchPaper> {
 	}
 	@Override
 	public void addResearchPaper(ResearchPaper paper) {
+		if (this.researchPapers == null) {
+			this.researchPapers = new ArrayList<>();
+		}
 		researchPapers.add(paper);
 	}
 
@@ -49,19 +52,17 @@ public class Researcher implements BeResearcher, Comparator<ResearchPaper> {
 
 	@Override
 	public int calculateHIndex() {
-//		Vector<ResearchPaper> papers = getAllPublishedPapers();
-//
-//		papers.sort(Comparator.naturalOrder().reversed());
 //  here we need to sort our papers collection in a reverse order
-
+		researchPapers.reversed();
 		int hIndex = 0;
-//		for (int i = 0; i < papers.size(); i++) {
-//			if (papers.get(i).getCitation() >= i + 1) {
-//				hIndex = i + 1;
-//			} else {
-//				break;
-//			}
-//		}
+		for (int i = 0; i < researchPapers.size(); i++) {
+			if (researchPapers.get(i).getCitations() >= i + 1) {
+				hIndex = i + 1;
+			} else {
+				break;
+			}
+		}
+
 
 		return hIndex;
 	}
@@ -87,6 +88,4 @@ public class Researcher implements BeResearcher, Comparator<ResearchPaper> {
 		return 0;
 	}
 }
-
-
 
