@@ -3,6 +3,7 @@ package Researcher;
 import java.util.*;
 
 public class Researcher implements BeResearcher {
+	private static List<Researcher>allResearchers = new ArrayList<Researcher>();
 	private List<ResearchProject>researchProjects;
 	private List<ResearchPaper>researchPapers;
 	private int hIndex;
@@ -10,13 +11,16 @@ public class Researcher implements BeResearcher {
 	private TypeOfTeacher resercherEmpl;
 
 	public Researcher(){
-
+		allResearchers.add(this);
 	}
 	public Researcher(List<ResearchProject> researchProjects,List<ResearchPaper>researchPapers,int hIndex,TypeOfTeacher resercherEmpl) {
 		this.researchProjects = researchProjects;
 		this.researchPapers = researchPapers;
 		this.hIndex = hIndex;
 		this.resercherEmpl = resercherEmpl;
+	}
+	public static List<Researcher>getAllResearchers(){
+		return allResearchers;
 	}
 
 	public void printPapers(Comparator<ResearchPaper> c) {
