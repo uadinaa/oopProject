@@ -1,0 +1,20 @@
+package testers;
+
+import java.io.IOException;
+
+import package1.Admin;
+import package1.DatabaseSingleton;
+
+public class TesterView {
+
+	 public static void main(String[] args) {
+	        try {
+	            DatabaseSingleton.initialize();  // Инициализация DatabaseSingleton перед использованиемя
+	            Admin admin = new Admin();
+	            admin.run();
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+		 
+	    }
+	}
