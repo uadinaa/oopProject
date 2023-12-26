@@ -77,11 +77,6 @@ public class ResearchPaper {
 	}
 
 
-//	public void printPapers(Comparator<ResearchPaper> c) {
-//		Collections.sort(researchPapers, c);
-//
-//	}
-
 	public String getCitation(Format f) {
         return f.getCitation(title, authors, journal, pages, date, doi);
     }
