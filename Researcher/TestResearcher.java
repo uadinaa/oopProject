@@ -1,14 +1,10 @@
 package Researcher;
 
 import java.util.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class TestResearcher {
-
     public static void main(String[] args) {
-        // Create a sample researcher
+        // Create a researcher
         Researcher researcher = new Researcher();
 
         // Create some research papers
@@ -29,15 +25,23 @@ public class TestResearcher {
 //        paper2.setDate(new Date());
 //        paper2.setDoi("doi456");
 //        paper2.setCitations(8);
-        ResearchPaper paper3 = new ResearchPaper("Paper 3", 8, new Date(), "35000", 2);
+        ResearchPaper paper3 = new ResearchPaper("Paper 3", 8, new Date(), "35000", 12);
         // Add research papers to the researcher
-        researcher.addResearchPaper(paper1);
-        researcher.addResearchPaper(paper2);
-        researcher.addResearchPaper(paper3);
+        researcher.publishingPaper(paper1);
+        researcher.publishingPaper(paper2);
+        researcher.publishingPaper(paper3);
+        ResearchProject rp1 = new ResearchProject("Project 1", new ArrayList<>());
+        rp1.setSupervisor(researcher);
+        rp1.addPublishedPapers(paper1);
+        System.out.println(rp1.toString());
 
         // Print papers sorted by title length
         System.out.println("Papers sorted by title length:");
         researcher.printPapers(new TitleLengthComparator());
         System.out.println(researcher.calculateHIndex());
+        System.out.println(paper3.getCitation(new BibTex()));
+        System.out.println(paper3.getCitation(new PlainText()));
     }
 }
+
+
