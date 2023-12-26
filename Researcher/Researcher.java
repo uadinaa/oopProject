@@ -2,7 +2,7 @@ package Researcher;
 
 import java.util.*;
 
-public class Researcher implements BeResearcher, Comparator<ResearchPaper> {
+public class Researcher implements BeResearcher {
 	private List<ResearchProject>researchProjects;
 	private List<ResearchPaper>researchPapers;
 	private int hIndex;
@@ -53,7 +53,7 @@ public class Researcher implements BeResearcher, Comparator<ResearchPaper> {
 	@Override
 	public int calculateHIndex() {
 //  here we need to sort our papers collection in a reverse order
-		researchPapers.reversed();
+		Collections.sort(researchPapers, new CitationsComparator());
 		int hIndex = 0;
 		for (int i = 0; i < researchPapers.size(); i++) {
 			if (researchPapers.get(i).getCitations() >= i + 1) {
@@ -67,11 +67,6 @@ public class Researcher implements BeResearcher, Comparator<ResearchPaper> {
 		return hIndex;
 	}
 
-	@Override
-	public boolean getCitation(Format f) {
-		return false;
-	}
-
 
 	@Override
 	public boolean publishResearchPapers() {
@@ -79,13 +74,21 @@ public class Researcher implements BeResearcher, Comparator<ResearchPaper> {
 	}
 
 	@Override
-	public void publishingPaper() {
-
+	public void publishingPaper(ResearchPaper paper) {
+		if (this.researchPapers == null) {
+			this.researchPapers = new ArrayList<>();
+		}
+		researchPapers.add(paper);
 	}
 
 	@Override
-	public int compare(ResearchPaper o1, ResearchPaper o2) {
-		return 0;
+	public String toString() {
+		return "Researcher{" +
+				"researchProjects=" + researchProjects +
+				", researchPapers=" + researchPapers +
+				", hIndex=" + hIndex +
+				", resercherEmpl=" + resercherEmpl +
+				'}';
 	}
 }
 
