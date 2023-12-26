@@ -7,17 +7,15 @@ public class Researcher implements BeResearcher {
 	private List<ResearchProject>researchProjects;
 	private List<ResearchPaper>researchPapers;
 	private int hIndex;
-
-	private TypeOfTeacher resercherEmpl;
+	
 
 	public Researcher(){
 		allResearchers.add(this);
 	}
-	public Researcher(List<ResearchProject> researchProjects,List<ResearchPaper>researchPapers,int hIndex,TypeOfTeacher resercherEmpl) {
+	public Researcher(List<ResearchProject> researchProjects,List<ResearchPaper>researchPapers,int hIndex) {
 		this.researchProjects = researchProjects;
 		this.researchPapers = researchPapers;
 		this.hIndex = hIndex;
-		this.resercherEmpl = resercherEmpl;
 	}
 	public static List<Researcher>getAllResearchers(){
 		return allResearchers;
@@ -91,7 +89,6 @@ public class Researcher implements BeResearcher {
 				"researchProjects=" + researchProjects +
 				", researchPapers=" + researchPapers +
 				", hIndex=" + hIndex +
-				", resercherEmpl=" + resercherEmpl +
 				'}';
 	}
 }
