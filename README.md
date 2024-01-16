@@ -1,9 +1,9 @@
 This project is research-oriented university system.
-  Our system supports:
+  Our system:
     - used java api
     - properly working serialization
-    - deisgn patterns such as singleton, mvc, observer
+    - have deisgn patterns such as singleton, mvc, observer
     - used comparable, comparators, equals, hashcode, tostring, enumeration, etc
-    - choice of language
-    - intuitive usage
+    - supports choice of language
+    - intuitive usable
     - documentation
