@@ -1,5 +1,5 @@
-Research-oriented university system
-  system supports:
+This project is research-oriented university system.
+  Our system supports:
     - used java api
     - properly working serialization
     - deisgn patterns such as singleton, mvc, observer
