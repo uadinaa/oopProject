@@ -23,12 +23,5 @@ This project is a research-oriented university system designed to enhance academ
 
 - Well-Documented – Comprehensive documentation to support further development and maintenance.
 
-![Competition Certificate](https://github.com/user-attachments/files/19551406/CERTIFICATE.jpg)
 
-[CERTIFICATE.pdf](https://github.com/user-attachments/files/19551406/CERTIFICATE.pdf)
-
-
-
-[View Certificate](https://github.com/user-attachments/files/19551226/CERTIFICATE.pdf)
-
-[CERTIFICATE.pdf](https://github.com/user-attachments/files/19551226/CERTIFICATE.pdf)
+![Competition Certificate](https://github.com/user-attachments/assets/47e9c50f-5d7a-4289-a9ab-0a5666eb53be)
