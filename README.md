@@ -24,5 +24,6 @@ This project is a research-oriented university system designed to enhance academ
 - Well-Documented – Comprehensive documentation to support further development and maintenance.
 
 
+[View Certificate](https://github.com/user-attachments/files/19551226/CERTIFICATE.pdf)
 
 [CERTIFICATE.pdf](https://github.com/user-attachments/files/19551226/CERTIFICATE.pdf)
