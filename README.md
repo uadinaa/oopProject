@@ -23,5 +23,7 @@ This project is a research-oriented university system designed to enhance academ
 
 - Well-Documented – Comprehensive documentation to support further development and maintenance.
 
+![usecase-diagram](https://github.com/user-attachments/assets/32decdfa-a1d1-465b-9102-834cff520b18)
+
 
 ![Competition Certificate](https://github.com/user-attachments/assets/47e9c50f-5d7a-4289-a9ab-0a5666eb53be)
